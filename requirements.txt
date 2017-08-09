@@ -1,0 +1,5 @@
+MySQL-python
+SQLAlchemy
+redis==2.10.5
+Flask==0.10.1
+Flask-SQLAlchemy==2.1

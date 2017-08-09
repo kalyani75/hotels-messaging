@@ -1,0 +1,9 @@
+---
+applications:
+- name: messaging
+  memory: 256M
+  instances: 1
+  host: messaging
+  services:
+  - mq
+  - mysql
