@@ -23,6 +23,10 @@ if 'VCAP_SERVICES' in os.environ:
 		
 	    cred = mysql_info['credentials']
 	    uri = cred['uri'].encode('utf8')
+	  elif key.find('redis') > 0:
+	    mq_info = vcap_services[key][0]
+		
+	    cred = mq_info['credentials']
 	    urimq = cred['uri'].encode('utf8')
 
   app.config['SQLALCHEMY_DATABASE_URI'] = uri 

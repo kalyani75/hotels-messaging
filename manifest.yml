@@ -1,9 +1,9 @@
 ---
 applications:
-- name: messaging
+- name: hotelscommessaging
   memory: 256M
   instances: 1
-  host: messaging
+  no-route: true
   services:
-  - mq
+  - redis
   - mysql
