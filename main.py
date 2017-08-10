@@ -18,7 +18,7 @@ if 'VCAP_SERVICES' in os.environ:
   urimq = ''
 
   for key, value in vcap_services.iteritems():   # iter on both keys and values
-	  if key.find('mysql') > 0 or key.find('cleardb') > 0:
+	  if key.find('mysql') > 0 or key.find('cleardb') >= 0:
 	    mysql_info = vcap_services[key][0]
 		
 	    cred = mysql_info['credentials']
